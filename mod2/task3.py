@@ -1,3 +1,5 @@
+#Выведите число, которое будет стоять между двумя другими после упорядочивания.
+
 input_string = input()
 
 index_first_space = input_string.find(" ")
