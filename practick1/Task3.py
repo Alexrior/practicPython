@@ -1,8 +1,18 @@
-if __name__ == "__main__":
-    numbers = list(map(int, input().split(" ")))
-    K = int(input())
-    
-    divisibles = [n for n in numbers if n%K == 0]
 
+#3. Через пробел вводятся числа. В следующей строке вводится число K. Используя генератор списка, 
+#создайте из введенных чисел список всех чисел, кратных K. Выведите результат.
+if __name__ == "__main__":
+    # Считываем целое число N
+    N = int(input())
+    
+    # Создаем список целых чисел от N до N^2 - 1
+    # range(start, stop) не включает в себя верхнюю границу (stop)
+    numbers = list(range(N, N**2))
+    
+    # Списковое включение: вычисляем квадратный корень для каждого числа n в списке
+    # pow(n, 0.5) — это аналог math.sqrt(n)
+    unsquare = [pow(n, 0.5) for n in numbers] 
+
+    # Выводим исходный список чисел и список их корней
     print(f"{numbers=}")
-    print(f"{divisibles=}")
+    print(f"{unsquare=}")
